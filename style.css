@@ -1,0 +1,182 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(rgb(237, 224, 137)rgb(106, 243, 106)en, rgb(112, 112, 229),.5);
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: contain;
+    /* Dark theme for space */
+    color: #ffffff;
+    /* Light text for readability */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+#story-container {
+    width: 80%;
+    max-width: 600px;
+    /* Max width for better reading experience */
+    margin: 20px;
+    background-color: #2a2a2a;
+    /* Slightly lighter than body for contrast */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+#story-title {
+    margin-bottom: 1em;
+    font-size: 2em;
+    color: #4fc3f7;
+    /* Sci-fi inspired color */
+}
+
+#story-text {
+    font-size: 1.1em;
+    line-height: 1.6;
+    /* Better readability for longer text */
+    margin-bottom: 2em;
+}
+
+.choice-button {
+    display: inline-block;
+    /* Align buttons in a row on larger screens */
+    margin: 10px;
+    padding: 15px 30px;
+    background-color: #673ab7;
+    /* Purple for an attractive look */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1em;
+}
+
+.choice-button:hover,
+.choice-button:focus {
+    background-color: #9575cd;
+    transform: scale(1.05);
+    /* Slight increase in size on hover/focus */
+    outline: none;
+    /* Remove focus outline */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    #story-container {
+        width: 90%;
+        /* Increase width for smaller screens */
+    }
+
+    .choice-button {
+        display: block;
+        /* Stack buttons vertically on smaller screens */
+        width: 80%;
+        /* Make buttons wider on small screens */
+        margin: 10px auto;
+        /* Center buttons */
+    }
+
+    #story-title {
+        font-size: 1.5em;
+    }
+
+    #story-text {
+        font-size: 1em;
+    }
+}
+
+/* Smooth scroll for better experience */
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#story-title,
+#story-text {
+    animation: fadeIn 2s ease;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.choice-button {
+    animation: pulse 2s infinite;
+}
+
+.choice-button {
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.choice-button:hover,
+.choice-button:focus {
+    background-color: #9575cd;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #673ab7;
+    outline: none;
+    /* Remove focus outline */
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.choice-button {
+    animation: slideInFromRight 0.5s ease-out;
+}
+
+
+.star {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    transition: transform 0.7s ease-out, opacity 0.5s;
+}
+
+@keyframes blast {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(10);
+    }
+}
