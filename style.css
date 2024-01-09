@@ -3,12 +3,8 @@ html {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: rgb(rgb(237, 224, 137)rgb(106, 243, 106)en, rgb(112, 112, 229),.5);
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: contain;
+    background-color: linear-gradient(#86A7FC,#864AF9,#FFB996);
     /* Dark theme for space */
-    color: #ffffff;
     /* Light text for readability */
     display: flex;
     justify-content: center;
