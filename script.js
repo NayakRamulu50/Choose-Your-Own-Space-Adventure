@@ -142,3 +142,26 @@ const story = {
 
 // Start the story
 displayStoryBit(story);
+
+const images = [
+    '1.png',
+    '2.png',
+    '3.png',
+    '4.png',
+    '5.png',
+    '6.png',
+    '7.png',
+    '8.png',
+    '9.png',
+    '10.jpg',
+    '11.jpg',
+    '12.jpg',
+  ];
+
+  let currentIndex = 0;
+
+  function changeBackground() {
+    document.body.style.backgroundImage = `url(${images[currentIndex]})`;
+    currentIndex = (currentIndex + 1) % images.length;
+  }
+
